@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>From the Baby I Missed… to the Forever I Found 💖</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      margin: 0;
+      background-color: #fff0f6;
+      overflow-x: hidden;
+      font-family: 'Segoe UI', sans-serif;
+      position: relative;
+    }
+
+    h2 {
+      text-align: center;
+      color: #e91e63;
+      margin-top: 30px;
+      animation: floatTitle 4s ease-in-out infinite;
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      padding: 20px;
+    }
+
+    .gallery img {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(233, 30, 99, 0.4);
+      opacity: 0;
+      animation: fadeIn 2s ease forwards;
+    }
+
+    .gallery img:nth-child(1) { animation-delay: 0.2s; }
+    .gallery img:nth-child(2) { animation-delay: 0.4s; }
+    .gallery img:nth-child(3) { animation-delay: 0.6s; }
+    .gallery img:nth-child(4) { animation-delay: 0.8s; }
+    .gallery img:nth-child(5) { animation-delay: 1s; }
+    .gallery img:nth-child(6) { animation-delay: 1.2s; }
+    .gallery img:nth-child(7) { animation-delay: 1.4s; }
+    .gallery img:nth-child(8) { animation-delay: 1.6s; }
+    .gallery img:nth-child(9) { animation-delay: 1.8s; }
+    .gallery img:nth-child(10) { animation-delay: 2s; }
+    .gallery img:nth-child(11) { animation-delay: 2.2s; }
+
+    .note {
+      text-align: center;
+      margin-top: 30px;
+      font-size: 18px;
+      color: #e91e63;
+    }
+
+    a {
+      display: block;
+      text-align: center;
+      margin-top: 20px;
+      color: #d81b60;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    /* Floating kisses & hearts */
+    .float-emoji {
+      position: absolute;
+      font-size: 24px;
+      animation: floatUpEmoji 8s linear infinite;
+      opacity: 0.7;
+    }
+
+    @keyframes floatUpEmoji {
+      0% {
+        transform: translateY(100vh);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-100vh);
+        opacity: 0;
+      }
+    }
+
+    /* Title animation */
+    @keyframes floatTitle {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    /* Fade-in animation */
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+        transform: scale(1.03);
+      }
+    }
+
+    /* Final message popup */
+    .popup {
+      text-align: center;
+      position: fixed;
+      bottom: 10px;
+      left: 0;
+      width: 100%;
+      font-size: 20px;
+      color: #ff2d75;
+      font-weight: bold;
+      animation: fadeInPop 2s ease-in 5s forwards;
+      opacity: 0;
+    }
+
+    @keyframes fadeInPop {
+      to {
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h2>📸 From the Baby I Missed… to the Forever I Found 💖</h2>
+
+  <!-- Floating kisses and hearts -->
+  <div class="float-emoji" style="left: 10%; animation-delay: 0s;">💋</div>
+  <div class="float-emoji" style="left: 20%; animation-delay: 2s;">💖</div>
+  <div class="float-emoji" style="left: 35%; animation-delay: 4s;">💋</div>
+  <div class="float-emoji" style="left: 50%; animation-delay: 1s;">💗</div>
+  <div class="float-emoji" style="left: 65%; animation-delay: 3s;">💋</div>
+  <div class="float-emoji" style="left: 80%; animation-delay: 5s;">💕</div>
+
+  <!-- Background music -->
+  <audio autoplay loop>
+    <source src="assets/kannam thumbi.mp3" type="audio/mp3">
+    Your browser does not support the audio tag.
+  </audio>
+
+  <!-- Gallery Images -->
+  <div class="gallery">
+    <img src="assets/images/pic 1.jpg" alt="Memory 1">
+    <img src="assets/images/pic 2.jpg" alt="Memory 2">
+    <img src="assets/images/pic 3.jpg" alt="Memory 3">
+    <img src="assets/images/pic 4.jpg" alt="Memory 4">
+    <img src="assets/images/pic 5.jpg" alt="Memory 5">
+    <img src="assets/images/pic 6.jpg" alt="Memory 6">
+    <img src="assets/images/pic 7.jpg" alt="Memory 7">
+    <img src="assets/images/pic 8.jpg" alt="Memory 8">
+    <img src="assets/images/pic 9.jpg" alt="Memory 9">
+    <img src="assets/images/pic 10.jpg" alt="Memory 10">
+    <img src="assets/images/pic 11.jpg" alt="Memory 11">
+  </div>
+
+  <div class="note">
+    Every photo tells a story... and every story led me to you. 💕<br>
+    Happy Birthday once again, my love.
+	Mmmwahh
+  </div>
+
+  <a href="index.html">← Back to Home</a>
+
+  <!-- Final Pop-Up Message -->
+  <div class="popup">💌 I love you forever, Sidduveyy 💖</div>
+
+</body>
+</html>

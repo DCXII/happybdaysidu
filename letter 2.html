@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Letter for My Sidduttan</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      margin: 0;
+      background: linear-gradient(to bottom, #fff0f5, #ffe4e1);
+      font-family: 'Courier New', monospace;
+      overflow-x: hidden;
+      overflow-y: auto;
+      height: 100vh;
+    }
+
+    .letter-box {
+      max-width: 700px;
+      margin: 50px auto;
+      padding: 40px;
+      background-color: white;
+      border-radius: 15px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+      position: relative;
+      z-index: 10;
+    }
+
+    .typed-text {
+      white-space: pre-wrap;
+      font-size: 18px;
+      line-height: 1.6;
+      color: #333;
+      animation: fadeIn 1s ease-in;
+    }
+
+    a {
+      display: inline-block;
+      margin-top: 20px;
+      color: #ff4081;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .floating {
+      position: fixed;
+      top: 100%;
+      font-size: 24px;
+      animation: float 10s linear infinite;
+      opacity: 0.8;
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(0) translateX(0);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-120vh) translateX(50px);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 🎵 Background Music -->
+  <audio id="bgm" autoplay loop>
+    <source src="assets/perfect acoustic.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <!-- 💌 Letter Box -->
+  <div class="letter-box">
+    <h2>💌 My Birthday Letter to You</h2>
+    <div id="typedText" class="typed-text"></div>
+    <a href="index.html">← Go Back</a>
+  </div>
+
+  <!-- Floating hearts & cakes -->
+  <script>
+    function createFloatingIcon(icon) {
+      const elem = document.createElement("div");
+      elem.classList.add("floating");
+      elem.style.left = Math.random() * 100 + "vw";
+      elem.style.fontSize = Math.random() * 20 + 20 + "px";
+      elem.textContent = icon;
+      document.body.appendChild(elem);
+      setTimeout(() => elem.remove(), 10000);
+    }
+
+    setInterval(() => {
+      createFloatingIcon("❤️");
+      createFloatingIcon("🎂");
+    }, 800);
+  </script>
+
+  <!-- Typing effect -->
+  <script>
+    const text = `To my dearest Sidduttaa, 💌
+
+Today is the day the universe decided to bless this world with you — and unknowingly, bless me too. Because every breath you've taken, every smile you've smiled, every beat your heart has given... it all led to me finding you. And loving you.
+
+There are no fancy words that can truly hold the weight of what I feel for you, but I'll still try.
+
+You are my peace in chaos, my laughter in silence, my heartbeat in the quietest nights. When I look at you, I see the home I never knew I needed. I see dreams I never dared to dream. And I see a forever I actually believe in.
+
+On your special day, I want you to know something simple but real:  
+I’m proud of the man you are.  
+Grateful for the love you give me.  
+And completely, entirely, endlessly in love with you.
+
+May this birthday bring you happiness, but even more than that, I hope it reminds you just how deeply you are loved — not just today, but every single day you exist.
+
+So here’s to you, Sidduttaa — my sunshine, my favorite, my baby, my person.  
+Let this year be full of smiles, tight hugs, wild dreams, and sweet “I love yous” whispered late into the night.
+
+With all the love my heart can hold,  
+Yours and only forever,  
+Annamma 💖`;
+
+    const element = document.getElementById("typedText");
+    let i = 0;
+
+    function typeWriter() {
+      if (i < text.length) {
+        element.textContent += text.charAt(i);
+        i++;
+        setTimeout(typeWriter, 35);
+      }
+    }
+
+    window.onload = function () {
+      typeWriter();
+
+      // 🎧 Force play music on click for mobile autoplay issues
+      document.addEventListener("click", () => {
+        const music = document.getElementById("bgm");
+        music.muted = false;
+        music.play().catch(() => {});
+      });
+    };
+  </script>
+
+</body>
+</html>

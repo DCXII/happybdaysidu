@@ -1,0 +1,25 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #fff0f5;
+  text-align: center;
+  padding: 50px;
+  color: #333;
+}
+
+h1 {
+  color: #e91e63;
+}
+
+.nav a {
+  display: inline-block;
+  margin: 10px;
+  padding: 12px 24px;
+  background: #ff80ab;
+  color: white;
+  text-decoration: none;
+  border-radius: 10px;
+}
+
+.nav a:hover {
+  background: #ff4081;
+}
